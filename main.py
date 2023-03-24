@@ -11,6 +11,7 @@ class Application(Frame):
 
     def __init__(self, master=None):
         super().__init__(master)
+        self.res_path = "Image/"
         self.is_ok = None
         self.count_labe = None
         self.entry_5 = None
@@ -18,8 +19,8 @@ class Application(Frame):
         self.entry_3 = None
         self.entry_2 = None
         self.entry_1 = None
-        self.OUTPUT_PATH = Path(__file__).parent
-        self.ASSETS_PATH = self.OUTPUT_PATH / Path(r"Image")
+        # self.OUTPUT_PATH = Path(__file__).parent
+        # self.ASSETS_PATH = self.OUTPUT_PATH / Path(r"Image")
         self.button_image_2 = None
         self.button_image_1 = None
         self.entry_image_2 = None
@@ -35,7 +36,7 @@ class Application(Frame):
         self.flag_split = tkinter.StringVar()
         self.flag_split.set("|")
         self.fold_name = tkinter.StringVar()
-        self.fold_name.set("build")
+        self.fold_name.set(r"BuildFiles")
         self.root = master
         self.root.geometry("1280x720")
         self.root.configure(bg="#FFFFFF")
@@ -43,8 +44,9 @@ class Application(Frame):
         self.root.resizable(False, False)
         self.create_widget()
 
-    def relative_to_assets(self, path: str) -> Path:
-        return self.ASSETS_PATH / Path(path)
+    def relative_to_assets(self, add_path):
+        # return self.ASSETS_PATH / Path(path)
+        return self.res_path + add_path
 
     def create_widget(self):
         """创建UI"""
@@ -279,7 +281,7 @@ class Application(Frame):
         self.entry_5.place(x=50, y=600, width=120, height=63)
 
     def find_files(self):
-        self.mode_file.set(tkinter.filedialog.askopenfilenames())
+        self.mode_file.set(tkinter.filedialog.askopenfilename())
 
     def run(self):
         self.winner_name = self.entry_2.get('0.0', 'end')
