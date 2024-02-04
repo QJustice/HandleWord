@@ -4,11 +4,11 @@
 
 样例word如下：
 
-![样例word](https://github.com/qascetic/HandleWord/blob/master/READMEFiles/word_image.jpg "word")
+![样例word](https://github.com/QJustice/HandleWord/blob/master/READMEFiles/word_image.jpg "word")
 
 运行程序可获得以下界面：
 
-![运行图](https://github.com/qascetic/HandleWord/blob/master/READMEFiles/run.jpg "初次运行")
+![运行图](https://github.com/QJustice/HandleWord/blob/master/READMEFiles/run.jpg "初次运行")
 
 ## 使用方法
 
@@ -32,7 +32,7 @@
    
    + “关闭”按钮：点击即可关闭窗口
    
-   ![运行效果图](https://github.com/qascetic/HandleWord/blob/master/READMEFiles/run_image.jpg)
+   ![运行效果图](https://github.com/QJustice/HandleWord/blob/master/READMEFiles/run_image.jpg)
 
 ## 注意事项
 
